@@ -1,0 +1,11 @@
+CREATE TABLE clubs (
+    club_id INT AUTO_INCREMENT PRIMARY KEY,
+    club_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE members (
+    member_id INT AUTO_INCREMENT PRIMARY KEY,
+    person_name VARCHAR(255) NOT NULL,
+    club_id INT NOT NULL,
+    FOREIGN KEY (club_id) REFERENCES clubs(club_id)
+);
